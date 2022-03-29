@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block body %}
+
+<div class="container">
+    <title>Мск биржа</title>
+    <h1>Акции Мск биржи</h1>
+    <!--<h2>Актуальность на {{ timeDMY }} {{ timeHMS }}</h2> -->
+    <p><span style="color: lightblue;">Актуальность на <u>{{ time }}</u></span>
+    <div class="alert alert-info">
+            <h2>Лукоил</h2>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://ru.tradingview.com/chart/vLHc3D2Y/?symbol=MOEX%3ALKOH" class="btn btn-info">Подробнее</a>
+    </div>
+</div>
+{% endblock %}
