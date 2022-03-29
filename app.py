@@ -18,21 +18,6 @@ def update_ticker(Link):
     return price
 
 
-LKOH = update_ticker("https://www.google.com/finance/quote/LKOH:MCX")
-GAZP = update_ticker("https://www.google.com/finance/quote/GAZP:MCX")
-SBER = update_ticker("https://www.google.com/finance/quote/SBER:MCX")
-YNDX = update_ticker("https://www.google.com/finance/quote/YNDX:MCX")
-PHOR = update_ticker("https://www.google.com/finance/quote/PHOR:MCX")
-GMKN = update_ticker("https://www.google.com/finance/quote/GMKN:MCX")
-ROSN = update_ticker("https://www.google.com/finance/quote/ROSN:MCX")
-TCSG = update_ticker("https://www.google.com/finance/quote/TCSG:MCX")
-VKCO = update_ticker("https://www.google.com/finance/quote/VKCO:MCX")
-POLY = update_ticker("https://www.google.com/finance/quote/POLY:MCX")
-AKRN = update_ticker("https://www.google.com/finance/quote/AKRN:MCX")
-NVTK = update_ticker("https://www.google.com/finance/quote/NVTK:MCX")
-AFLT = update_ticker("https://www.google.com/finance/quote/AFLT:MCX")
-VTBR = update_ticker("https://www.google.com/finance/quote/VTBR:MCX")
-MGNT = update_ticker("https://www.google.com/finance/quote/MGNT:MCX")
 
 
 @app.route('/')
@@ -44,16 +29,42 @@ def index():
 def about():
     return render_template("about.html")
 
+
+
 @app.route('/msc-market')
 def rumarket():
+    LKOH = update_ticker("https://www.google.com/finance/quote/LKOH:MCX")
+    GAZP = update_ticker("https://www.google.com/finance/quote/GAZP:MCX")
+    SBER = update_ticker("https://www.google.com/finance/quote/SBER:MCX")
+    YNDX = update_ticker("https://www.google.com/finance/quote/YNDX:MCX")
+    ROSN = update_ticker("https://www.google.com/finance/quote/ROSN:MCX")
+    TCSG = update_ticker("https://www.google.com/finance/quote/TCSG:MCX")
+    VKCO = update_ticker("https://www.google.com/finance/quote/VKCO:MCX")
+    AFLT = update_ticker("https://www.google.com/finance/quote/AFLT:MCX")
+    VTBR = update_ticker("https://www.google.com/finance/quote/VTBR:MCX")
+    MGNT = update_ticker("https://www.google.com/finance/quote/MGNT:MCX")
     dt = datetime.datetime.now()
     return render_template("msk-market.html", time=dt.strftime('%d.%m.%Y %H:%M:%S'), LKOH=LKOH, GAZP=GAZP,
-                           SBER=SBER, YNDX=YNDX, PHOR=PHOR, GMKN=GMKN, ROSN=ROSN, TCSG=TCSG, VKCO=VKCO,
-                           POLY=POLY, AKRN=AKRN, NVTK=NVTK, AFLT=AFLT, VTBR=VTBR, MGNT=MGNT)
+                           SBER=SBER, YNDX=YNDX, ROSN=ROSN, TCSG=TCSG, VKCO=VKCO,
+                           AFLT=AFLT, VTBR=VTBR, MGNT=MGNT)
 
+
+# Компании, акции которых торгуются на СПБ бирже
 @app.route('/spb-market')
 def market():
-    return render_template("spb-market.html")
+    AAPL = update_ticker("https://www.google.com/finance/quote/AAPL:NASDAQ")
+    TSLA = update_ticker("https://www.google.com/finance/quote/TSLA:NASDAQ")
+    BABA = update_ticker("https://www.google.com/finance/quote/BABA:NYSE")
+    MSFT = update_ticker("https://www.google.com/finance/quote/MSFT:NASDAQ")
+    AMZN = update_ticker("https://www.google.com/finance/quote/AMZN:NASDAQ")
+    META = update_ticker("https://www.google.com/finance/quote/FB:NASDAQ")
+    BA = update_ticker("https://www.google.com/finance/quote/BA:NYSE")
+    NVDA = update_ticker("https://www.google.com/finance/quote/NVDA:NASDAQ")
+    PYPL = update_ticker("https://www.google.com/finance/quote/PYPL:NASDAQ")
+    F = update_ticker("https://www.google.com/finance/quote/F:NYSE")
+    dt = datetime.datetime.now()
+    return render_template("spb-market.html", time=dt.strftime('%d.%m.%Y %H:%M:%S'), AAPL=AAPL, TSLA=TSLA, BABA=BABA,
+                           MSFT=MSFT, AMZN=AMZN, META=META, BA=BA, NVDA=NVDA, PYPL=PYPL, F=F)
 
 
 

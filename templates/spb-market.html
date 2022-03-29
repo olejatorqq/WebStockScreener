@@ -1,9 +1,71 @@
 {% extends 'base.html' %}
-
-
 {% block body %}
+
 <div class="container">
-    <title>труляля</title>
-    <h1>Test1</h1>
+    <title>Акции SPB СПБ биржа</title>
+    <h1>SPB (Санкт-Петербургская биржа)</h1>
+
+    <!--<h2>Актуальность на {{ timeDMY }} {{ timeHMS }}</h2> -->
+    <p><span style="color: lightblue;">Актуальность на <u>{{ time }}</u></span>
+    <div class="alert alert-info">
+            <h2>AAPL - Apple</h2>
+            <p>Цена - {{AAPL}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/AAPL:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>TSLA - Tesla</h2>
+            <p>Цена - {{TSLA}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/TSLA:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>BABA - Alibaba Group</h2>
+            <p>Цена - {{BABA}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/BABA:NYSE" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>MSFT - Microsoft</h2>
+            <p>Цена - {{MSFT}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/MSFT:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>AMZN - Amazon</h2>
+            <p>Цена - {{AMZN}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/AMZN:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>META - Meta</h2>
+            <p>Цена - {{META}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/FB:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>BA - Boeing</h2>
+            <p>Цена - {{BA}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/BA:NYSE" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>NVDA - Nvidia</h2>
+            <p>Цена - {{NVDA}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/NVDA:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>PYPL - PayPal</h2>
+            <p>Цена - {{PYPL}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/PYPL:NASDAQ" class="btn btn-info">Подробнее</a>
+    </div>
+    <div class="alert alert-info">
+            <h2>F - Ford</h2>
+            <p>Цена - {{F}} $</p>
+            <!-- <p>Цена на {{ timeDMY }} {{ timeHMS }}</p> -->
+            <a href="https://www.google.com/finance/quote/F:NYSE" class="btn btn-info">Подробнее</a>
+    </div>
 </div>
 {% endblock %}
